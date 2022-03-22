@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C# SKA\\ClassicWebApi\\ClassicWebAPI\\ClassicWebAPI.csproj",
+      "projectUniqueName": "D:\\C# SKA\\Csharp_HW_Red\\ClassicWebAPI.csproj",
       "projectName": "ClassicWebAPI",
-      "projectPath": "D:\\C# SKA\\ClassicWebApi\\ClassicWebAPI\\ClassicWebAPI.csproj",
+      "projectPath": "D:\\C# SKA\\Csharp_HW_Red\\ClassicWebAPI.csproj",
       "packagesPath": "C:\\Users\\red.jiang76\\.nuget\\packages\\",
-      "outputPath": "D:\\C# SKA\\ClassicWebApi\\ClassicWebAPI\\obj\\",
+      "outputPath": "D:\\C# SKA\\Csharp_HW_Red\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\red.jiang76\\AppData\\Roaming\\NuGet\\NuGet.Config",

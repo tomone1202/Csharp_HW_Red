@@ -32,20 +32,22 @@ namespace ClassicWebAPI.Services
             return info?.FirstOrDefault()?.Map.GoogleMap;
         }
 
-        public async Task<PostDataInfo> PostInfo(string region)
+        public async Task<PostDataInfo> GetCountryNamesBySubRegion(string region)
         {
             var httpResponseMessage = await _httpClientService.GetAsync($"https://restcountries.com/v3.1/region/{region}");
             if (!httpResponseMessage.IsSuccessStatusCode) return null;
             var data = await httpResponseMessage.Content.ReadAsStringAsync();
             var info = JsonConvert.DeserializeObject<IEnumerable<CountryInfo>>(data);
-            List<string> allCountry = new List<string>();
-            foreach (CountryInfo country in info)
+            var allCountry = new List<string>();
+            foreach (var country in info)
             {
                 allCountry.Add(country.CountryName.Official);
             };
-            var result=new PostDataInfo();
-            result.Subregion = region;
-            result.Countries = allCountry.ToArray();
+            var result = new PostDataInfo
+            {
+                Subregion = region,
+                Countries = allCountry.ToArray()
+            };
             return result;
         }
     }

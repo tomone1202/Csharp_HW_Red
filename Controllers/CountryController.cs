@@ -39,7 +39,7 @@ namespace ClassicWebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> GetCountryBySubRegion(string SubRegion)
         {
-            var result = await _countryService.PostInfo(SubRegion);
+            var result = await _countryService.GetCountryNamesBySubRegion(SubRegion);
             if (result == null)
             {
                 return Ok("找不到地區");

@@ -10,6 +10,6 @@ namespace ClassicWebAPI.Services.Interfaces
            Task<IEnumerable<CountryInfo>> GetAll();
            Task<string> GetMap(string country);
 
-           Task<PostDataInfo> PostInfo (string region);
+           Task<PostDataInfo> GetCountryNamesBySubRegion (string region);
     }
 }
